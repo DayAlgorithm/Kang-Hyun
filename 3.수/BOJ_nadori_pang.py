@@ -9,8 +9,8 @@ for i in range(N):
         min_index = i #0보다 큰 최소 나도리 바구니 위치
         break        
 
-if nadoris % K == 0: #포인터 두개 앞뒤로 갱신하며 반복
-    while(T > 0):
+if nadoris % K == 0:           #일단 나도리 % K !=이면 불가능
+    while(T > 0):              #포인터 두개 앞뒤로 갱신하며 반복
         basket[min_index] -= 1 #최소에서 하나 빼서
         basket[max_index] += 1 #최대에 줌
         if basket[min_index] == 0: #최소가 0 되면 최소위치 갱신
